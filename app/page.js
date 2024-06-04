@@ -4,12 +4,9 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h1 className="text-7xl">Home Page</h1>
-      <Link href="/about" className="text-5xl text-red-700">
-        About Page
-      </Link>
-      <Link href="/contact" className="text-5xl text-green-500">
-        Contact Page
+      <h1 className="mb-8 text-5xl font-bold">NextJs Tutorial</h1>
+      <Link href="/client" className="btn btn-accent">
+        Get Started
       </Link>
     </div>
   );
