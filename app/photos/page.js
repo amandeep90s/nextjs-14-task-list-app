@@ -4,7 +4,6 @@ import React from "react";
 export const url = "https://dummyjson.com/products";
 
 const fetchPhotos = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(url);
 
   if (!response.ok) {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { url } from "../page";
@@ -18,6 +19,14 @@ const PhotoDetail = async ({ params }) => {
       </Link>
 
       <h1 className="mb-8 text-4xl">{title}</h1>
+
+      <Image
+        src={thumbnail}
+        alt={title}
+        width={400}
+        height={400}
+        className="w-48 h-48 rounded-lg"
+      />
     </div>
   );
 };
