@@ -1,7 +1,7 @@
 import PhotosList from "@/components/PhotosList";
 import React from "react";
 
-const url = "https://dummyjson.com/products";
+export const url = "https://dummyjson.com/products";
 
 const fetchPhotos = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
