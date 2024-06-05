@@ -8,11 +8,11 @@ const fetchPhotos = async () => {
   return await response.json();
 };
 
-const Drinks = async () => {
+const Photos = async () => {
   const data = await fetchPhotos();
   console.log(data);
 
-  return <div>Drinks page</div>;
+  return <div>Photos page</div>;
 };
 
-export default Drinks;
+export default Photos;
