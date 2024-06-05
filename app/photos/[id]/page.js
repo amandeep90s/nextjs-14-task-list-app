@@ -25,7 +25,8 @@ const PhotoDetail = async ({ params }) => {
         alt={title}
         width={400}
         height={400}
-        className="w-48 h-48 rounded-lg"
+        className="w-48 h-48 rounded-lg shadow-lg"
+        priority
       />
     </div>
   );
