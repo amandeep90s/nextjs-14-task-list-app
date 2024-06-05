@@ -2,9 +2,14 @@ import React from "react";
 
 const url = "https://jsonplaceholder.typicode.com/photos";
 
-const Drinks = async () => {
+const fetchPhotos = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(url);
-  const data = await response.json();
+  return await response.json();
+};
+
+const Drinks = async () => {
+  const data = await fetchPhotos();
   console.log(data);
 
   return <div>Drinks page</div>;
