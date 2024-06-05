@@ -1,0 +1,20 @@
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const PhotosList = ({ photos }) => {
+  console.log(photos);
+  return (
+    <ul className="pl-0 menu menu-vertical">
+      {photos.map((photo) => (
+        <li key={photo.id}>
+          <Link href={`/photos/${photo.id}`} className="text-xl font-medium">
+            {photo.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default PhotosList;

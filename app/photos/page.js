@@ -1,6 +1,7 @@
+import PhotosList from "@/components/PhotosList";
 import React from "react";
 
-const url = "https://jsonplaceholder.typicode.com/photos";
+const url = "https://dummyjson.com/products";
 
 const fetchPhotos = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -14,9 +15,8 @@ const fetchPhotos = async () => {
 
 const Photos = async () => {
   const data = await fetchPhotos();
-  console.log(data);
 
-  return <div>Photos page</div>;
+  return <PhotosList photos={data.products} />;
 };
 
 export default Photos;
