@@ -1,7 +1,34 @@
+import prisma from "@/utils/db";
 import React from "react";
 
-const PrismaExample = () => {
-  return <div>prisma example page</div>;
+const prismaHandlers = async () => {
+  await prisma.task.create({
+    data: {
+      content: "Hello World",
+    },
+  });
+
+  const tasks = await prisma.task.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  return tasks;
+};
+
+const PrismaExample = async () => {
+  const tasks = await prismaHandlers();
+
+  return (
+    <>
+      <h1 className="text-7xl">PrismaExample</h1>
+      {tasks.map((task) => (
+        <h2 key={task.id} className="py-2 text-xl">
+          {task.content}
+        </h2>
+      ))}
+    </>
+  );
 };
 
 export default PrismaExample;
