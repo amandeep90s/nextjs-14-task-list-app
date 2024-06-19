@@ -25,3 +25,7 @@ export const deleteTask = async (formData) => {
   await prisma.task.delete({ where: { id } });
   revalidatePath("/tasks");
 };
+
+export const getTask = async (id) => {
+  return await prisma.task.findUnique({ where: { id } });
+};
