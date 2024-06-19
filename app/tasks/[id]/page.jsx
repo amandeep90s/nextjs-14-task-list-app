@@ -9,7 +9,7 @@ const SingleTaskPage = async ({ params }) => {
 
   return (
     <div className="mb-16">
-      <Link href="/tasks" className="capitalize btn btn-accent">
+      <Link href="/tasks" className="mb-10 capitalize btn btn-accent">
         back to tasks
       </Link>
 
